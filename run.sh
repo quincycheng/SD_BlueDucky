@@ -4,3 +4,5 @@ read -rsp $'Press enter to continue...\n'
 
 python BlueDucky.py
 read -rsp $'Press enter to continue...\n'
+
+bash
