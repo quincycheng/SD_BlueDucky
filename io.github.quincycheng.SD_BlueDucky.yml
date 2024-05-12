@@ -20,6 +20,11 @@ modules:
         path: run.sh
 
   - name: pybluez
+    buildsystem: simple
+    build-commands:
+      - apt update
+      - apt install bluez
+
     sources:
       - type: git
         url: https://github.com/pybluez/pybluez
