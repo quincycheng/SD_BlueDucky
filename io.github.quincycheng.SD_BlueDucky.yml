@@ -20,8 +20,6 @@ modules:
         path: run.sh
   - name: pybluez
     buildsystem: simple
-    build-commands:
-      - python3 setup.py install
     sources:
       - type: git
         url: https://github.com/pybluez/pybluez
