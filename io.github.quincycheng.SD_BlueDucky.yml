@@ -2,12 +2,35 @@ id: io.github.quincycheng.SD_BlueDucky
 runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
-command: hello.sh
+command: python3
+finish-args:
+  - --share=network
+  - --device=all
+  - --allow=bluetooth
+  - --env=DBUS_FATAL_WARNINGS=0
+  - --filesystem=host
+
 modules:
-  - name: hello
+  - name: run
     buildsystem: simple
     build-commands:
-      - install -D hello.sh /app/bin/hello.sh
+      - install -D run.sh /app/bin/run.sh
     sources:
       - type: file
-        path: hello.sh
+        path: run.sh
+  - name: pybluez
+    buildsystem: simple
+    build-commands:
+      - python3 setup.py install
+    sources:
+      - type: git
+        url: https://github.com/pybluez/pybluez
+
+  - name: bdaddr
+    buildsystem: simple
+    build-commands:
+      - gcc -o bdaddr tools/bdaddr.c src/oui.c -I . -lbluetooth
+      - install -D bdaddr /usr/local/bin/bdaddr
+    sources:
+      - type: git
+        url: https://github.com/pybluez/pybluez
