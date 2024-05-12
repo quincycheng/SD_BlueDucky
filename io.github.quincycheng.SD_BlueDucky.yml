@@ -18,8 +18,8 @@ modules:
     sources:
       - type: file
         path: run.sh
+
   - name: pybluez
-    buildsystem: simple
     sources:
       - type: git
         url: https://github.com/pybluez/pybluez
