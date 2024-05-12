@@ -7,6 +7,7 @@ finish-args:
   - --share=network
   - --device=all
   - --allow=bluetooth
+  - --system-talk-name=org.bluez
   - --env=DBUS_FATAL_WARNINGS=0
   - --filesystem=host
 
@@ -30,7 +31,8 @@ modules:
         - --disable-udev
     sources:
       - type: archive
-        url: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.9.tar.xz
+        url: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.69.tar.xz
+        sha256: bc5a35ddc7c72d0d3999a0d7b2175c8b7d57ab670774f8b5b4900ff38a2627fc
 
   - name: pybluez
     buildsystem: simple
