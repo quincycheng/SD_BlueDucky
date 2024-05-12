@@ -12,6 +12,6 @@ jobs:
     - uses: actions/checkout@v4
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
-        bundle: io.github.quincycheng.SD_BlueDucky
+        bundle: io.github.quincycheng.SD_BlueDucky.flatpak
         manifest-path: io.github.quincycheng.SD_BlueDucky.yml
         cache-key: flatpak-builder-${{ github.sha }}
