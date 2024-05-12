@@ -19,16 +19,27 @@ modules:
       - type: file
         path: run.sh
 
+  - name: bluez
+    config-opts:
+        - --disable-datafiles
+        - --disable-systemd
+        - --disable-manpages
+        - --enable-library
+        - --prefix=/app
+        - --sysconfdir=/app/etc
+        - --disable-udev
+    sources:
+      - type: archive
+        url: https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.9.tar.xz
+
   - name: pybluez
     buildsystem: simple
     build-commands:
-      - apt update
-      - apt install bluez
-
+      -  "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"${PWD}\" --no-build-isolation"
     sources:
       - type: git
-        url: https://github.com/pybluez/pybluez
-
+        url: https://github.com/pybluez/pybluez.git
+        
   - name: bdaddr
     buildsystem: simple
     build-commands:
@@ -36,4 +47,4 @@ modules:
       - install -D bdaddr /usr/local/bin/bdaddr
     sources:
       - type: git
-        url: https://github.com/pybluez/pybluez
+        url: https://github.com/pybluez/pybluez.git
