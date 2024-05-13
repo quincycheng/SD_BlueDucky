@@ -20,6 +20,20 @@ modules:
       - type: file
         path: run.sh
 
+        
+  - name: ical
+    cleanup: 
+      - /lib/cmake
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_INSTALL_LIBDIR=/app/lib
+      - -DBUILD_SHARED_LIBS=ON
+    sources: 
+      - type: archive
+        url: https://github.com/libical/libical/archive/v3.0.10.tar.gz
+        sha256: f933b3e6cf9d56a35bb5625e8e4a9c3a50239a85aea05ed842932c1a1dc336b4
+
   - name: bluez
     config-opts:
         - --disable-datafiles
