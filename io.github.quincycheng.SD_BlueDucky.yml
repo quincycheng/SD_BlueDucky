@@ -63,4 +63,4 @@ modules:
       - install -D bdaddr /usr/local/bin/bdaddr
     sources:
       - type: git
-        url: https://github.com/pybluez/pybluez.git
+        url: https://github.com/bluez/bluez.git
