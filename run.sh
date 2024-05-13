@@ -1,8 +1,5 @@
 #!/bin/sh
-echo "Hello world, from a sandbox"
-read -rsp $'Press enter to continue...\n'
-
+echo "Starting..."
 python BlueDucky.py
-read -rsp $'Press enter to continue...\n'
-
-bash
+echo 'Bye!"
+sh
