@@ -2,8 +2,9 @@
 echo "Starting..."
 pwd
 ls /app
-cd /app/BlueDucky/
+cd /app/blueducky/
 ls
 python BlueDucky.py
-echo "Bye!"
+echo "Entering sh..."
 sh
+echo "Bye!"
