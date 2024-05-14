@@ -1,8 +1,9 @@
 #!/bin/sh
 echo "Starting..."
 pwd
-ls /
-tree /app
+ls /app
+cd /app/BlueDucky/
+ls
 python BlueDucky.py
 echo "Bye!"
 sh
