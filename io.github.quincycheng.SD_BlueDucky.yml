@@ -69,7 +69,9 @@ modules:
   - name: blueducky
     buildsystem: simple
     build-commands:
-      -  "env"
+      -  install -D BlueDucky.py /app/BlueDucky.py
+      -  install -D utils /app/utils
+      -  install -D payloads /app/payloads
     sources:
       - type: git
         url: https://github.com/pentestfunctions/BlueDucky.git
