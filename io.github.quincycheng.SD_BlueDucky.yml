@@ -70,8 +70,9 @@ modules:
     buildsystem: simple
     build-commands:
       -  install -D BlueDucky.py /app/BlueDucky.py
-      -  install -D utils /app/utils
-      -  install -D payloads /app/payloads
+      -  install -D utils/magic_keyboard_hid.py /app/utils/magic_keyboard_hid.py
+      -  install -D utils/menu_functions.py /app/utils/menu_functions.py
+      -  install -D utils/register_device.py /app/utils/register_device.py
     sources:
       - type: git
         url: https://github.com/pentestfunctions/BlueDucky.git
