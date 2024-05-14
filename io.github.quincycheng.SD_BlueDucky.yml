@@ -64,3 +64,12 @@ modules:
     sources:
       - type: git
         url: https://github.com/bluez/bluez.git
+
+
+  - name: blueducky
+    buildsystem: simple
+    build-commands:
+      -  "env"
+    sources:
+      - type: git
+        url: https://github.com/pentestfunctions/BlueDucky.git
