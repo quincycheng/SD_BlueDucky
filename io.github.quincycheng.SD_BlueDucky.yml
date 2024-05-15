@@ -95,3 +95,16 @@ modules:
       - type: archive
         url: https://files.pythonhosted.org/packages/ac/4a/f24ddf1d20cc4b56affc7921e29928559a06c922eb60077448392792b914/PyGObject-3.46.0.tar.gz
         sha256: 481437b05af0a66b7c366ea052710eb3aacbb979d22d30b797f7ec29347ab1e6
+
+
+  - name: py3cairo
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://github.com/pygobject/pycairo/archive/refs/tags/v1.26.0.tar.gz
+        sha256: b969ca68551c4ba37d08faa0da3ddae090b489062e8008f84db8e60bbe4ae9d8
+        x-checker-data:
+          type: anitya
+          project-id: 13166
+          stable-only: true
+          url-template: https://github.com/pygobject/pycairo/archive/refs/tags/v$version.tar.gz
