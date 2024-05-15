@@ -87,14 +87,6 @@ modules:
         url: https://files.pythonhosted.org/packages/58/56/3e84f2c1f2e39b9ea132460183f123af41e3b9c8befe222a35636baa6a5a/pydbus-0.6.0.tar.gz
         sha256: 4207162eff54223822c185da06c1ba8a34137a9602f3da5a528eedf3f78d0f2c
 
-  - name: pygobject
-    buildsystem: simple
-    build-commands:
-      - "pip3 install --no-index --no-build-isolation --prefix=${FLATPAK_DEST} ."
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/ac/4a/f24ddf1d20cc4b56affc7921e29928559a06c922eb60077448392792b914/PyGObject-3.46.0.tar.gz
-        sha256: 481437b05af0a66b7c366ea052710eb3aacbb979d22d30b797f7ec29347ab1e6
 
 
   - name: py3cairo
@@ -108,3 +100,15 @@ modules:
           project-id: 13166
           stable-only: true
           url-template: https://github.com/pygobject/pycairo/archive/refs/tags/v$version.tar.gz
+
+
+
+  - name: pygobject
+    buildsystem: simple
+    build-commands:
+      - "pip3 install --no-index --no-build-isolation --prefix=${FLATPAK_DEST} ."
+    sources:
+      - type: archive
+        url: https://files.pythonhosted.org/packages/ac/4a/f24ddf1d20cc4b56affc7921e29928559a06c922eb60077448392792b914/PyGObject-3.46.0.tar.gz
+        sha256: 481437b05af0a66b7c366ea052710eb3aacbb979d22d30b797f7ec29347ab1e6
+
