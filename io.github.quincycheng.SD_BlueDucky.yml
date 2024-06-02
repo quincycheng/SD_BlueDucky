@@ -73,6 +73,11 @@ modules:
       -  install -D utils/magic_keyboard_hid.py /app/utils/magic_keyboard_hid.py
       -  install -D utils/menu_functions.py /app/utils/menu_functions.py
       -  install -D utils/register_device.py /app/utils/register_device.py
+      -  install -D payloads/payload_example_1.txt /app/payloads/payload_example_1.txt
+      -  install -D payloads/payload_example_2.txt /app/payloads/payload_example_2.txt
+      -  install -D payloads/wp_payload.txt /app/payloads/wp_payload.txt
+
+
     sources:
       - type: git
         url: https://github.com/pentestfunctions/BlueDucky.git
